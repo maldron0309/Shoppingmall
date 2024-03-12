@@ -1,16 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>header</title>
 </head>
 <body>
 <header style="position: fixed; top: 0px; width: 100%; height: 40px; background-color: blue;
-color: white; text-align: center; line-height: 40px; font-size: 30px"> ¼îÇÎ¸ô È¸¿ø°ü¸® ver 1.0</header>
+color: white; text-align: center; line-height: 40px; font-size: 30px"> ì‡¼í•‘ëª° íšŒì›ê´€ë¦¬ ver 1.0</header>
 
 <nav style="position: fixed; top: 40px; width: 100%; height: 20px; background-color: lightblue; color: white; line-height: 20px;">
-È¸¿øµî·Ï &nbsp; &nbsp; È¸¿ø¸ñ·ÏÁ¶È¸/¼öÁ¤ &nbsp; &nbsp; È¸¿ø¸ÅÃâÁ¶È¸ &nbsp; &nbsp; &nbsp; &nbsp; È¨À¸·Î.</nav>
+<a href="join.jsp"> íšŒì›ë“±ë¡</a> &nbsp; &nbsp;
+<a href="list.jsp"> íšŒì›ëª©ë¡ì¡°íšŒ/ìˆ˜ì •</a> &nbsp; &nbsp;
+<a href="salary.jsp"> íšŒì›ë§¤ì¶œì¡°íšŒ</a> &nbsp; &nbsp;
+<a href="index.jsp"> í™ˆìœ¼ë¡œ.</a> &nbsp; &nbsp;
+</nav>
 </body>
 </html>
