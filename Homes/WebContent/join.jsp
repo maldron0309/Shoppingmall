@@ -1,5 +1,5 @@
 <%@page import="java.sql.*" %>
-<%@page import="DBPKG.Utill" %>
+<%@page import="DBPKG.Util" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -18,8 +18,8 @@ Statement stmt = null;
 String custno="";
 
 try {
-	conn = Utill.getConnection();
-	stmt = conn.createsStatment();
+	conn = Util.getConnection();
+	stmt = conn.createStatement();
 	String sql = "SELECT MAX(custno)+1 custno FROM member_tbl_02";
 	ResultSet rs = stmt.executeQuery(sql);
 	rs.next();
