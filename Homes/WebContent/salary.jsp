@@ -52,7 +52,16 @@ try {
                 grade = "직원";
                 break;
         }
-        // Output your table row here
+%>
+
+<tr>
+	<td><%=rs.getString("custno") %></td>
+	<td><%=rs.getString("custname") %></td>
+	<td><%=grade %></td>
+	<td><%=rs.getString("price") %></td>
+</tr>
+
+<%
     }
 } catch (Exception e) {
     e.printStackTrace();
