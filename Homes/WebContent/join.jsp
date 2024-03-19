@@ -1,3 +1,5 @@
+<%@page import="java.sql.*" %>
+<%@page import="DBPKG.Utill" %>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,6 +12,25 @@
 <script type="text/javascript" src="check.js"></script>
 <jsp:include page="header.jsp"></jsp:include>
 
+<%
+Connection conn = null;
+Statement stmt = null;
+String custno="";
+
+try {
+	conn = Utill.getConnection();
+	stmt = conn.createsStatment();
+	String sql = "SELECT MAX(custno)+1 custno FROM member_tbl_02";
+	ResultSet rs = stmt.executeQuery(sql);
+	rs.next();
+	custno = rs.getString("custno");
+}
+
+catch(Exception e){
+	e.printStackTrace();
+}
+%>
+
 <section style="position: fixed; top: 60px; width: 100%; height: 100%; background-color: lightgray">
 <h2 style="text-align: center"> <b>쇼핑몰 회원관리 프로그램</b> </h2> <br>
 
@@ -18,7 +39,7 @@
 <table border="1">
 <tr>
 	<td>회원번호(자동발생)</td>
-	<td><input type=text" name="custno" readonly="readonly"></td>
+	<td><input type=text" name="custno" value="<%=custno%>"readonly="readonly"></td>
 </tr>
 
 <tr>
